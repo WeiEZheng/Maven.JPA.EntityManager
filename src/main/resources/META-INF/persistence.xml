@@ -2,13 +2,13 @@
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <properties>
         <!-- database connection -->
-        <property name="javax.persistence.jdbc.driver" value="" />
-        <property name="javax.persistence.jdbc.url" value="" />
-        <property name="javax.persistence.jdbc.user" value="" />
-        <property name="javax.persistence.jdbc.password" value="" />
+        <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+        <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/comp" />
+        <property name="javax.persistence.jdbc.user" value="Wei" />
+        <property name="javax.persistence.jdbc.password" value="Zipcode0" />
 
-        <property name="hibernate.dialect" value=""/>
-        <property name="hibernate.show_sql" value="" />
-        <property name="hibernate.format_sql" value="" />
+        <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+        <property name="hibernate.show_sql" value="true" />
+        <property name="hibernate.format_sql" value="true" />
     </properties>
 </persistence-unit>

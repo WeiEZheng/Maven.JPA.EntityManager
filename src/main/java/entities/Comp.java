@@ -43,7 +43,7 @@ public class Comp {
         this.gpu = gpu;
     }
 
-    @Column(name = "cpu")
+    @Column(name = "cpu_name")
     public String getCpu() {
         return cpu;
     }
