@@ -2,7 +2,7 @@
 <project version="4">
   <component name="JpbDataSourceConfig">
     <data-sources>
-      <data-source id="66398d7c-5229-4039-9807-628938edb698" name="jpaentity" url="jdbc:mysql://localhost/comp?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=UTC" driverClass="com.mysql.cj.jdbc.Driver" />
+      <data-source id="66398d7c-5229-4039-9807-628938edb698" name="jpaentity" url="jdbc:mysql://localhost/comp" driverClass="com.mysql.cj.jdbc.Driver" />
     </data-sources>
   </component>
 </project>

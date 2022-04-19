@@ -1,30 +1,28 @@
 package entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "comp_spec")
+@Table(name = "comp")
 public class Comp {
     @Id
     private Integer id;
     private String gpu;
-    private String cpu;
+    private String cpu_name;
     private String osVersion;
+    @Enumerated(EnumType.STRING)
     private Os osType;
-    private String motherboard;
+    private String mb;
 
     public Comp(){}
 
-    public Comp(Integer id, String gpu, String cpu, String osVersion, Os osType, String motherboard) {
+    public Comp(Integer id, String gpu, String cpu_name, String osVersion, Os osType, String mb) {
         this.id = id;
         this.gpu = gpu;
-        this.cpu = cpu;
+        this.cpu_name = cpu_name;
         this.osVersion = osVersion;
         this.osType = osType;
-        this.motherboard = motherboard;
+        this.mb = mb;
     }
 
     public Integer getId() {
@@ -34,22 +32,23 @@ public class Comp {
     public void setId(Integer id) {
         this.id = id;
     }
+
     @Column(name = "gpu")
     public String getGpu() {
         return gpu;
     }
-
+    @Column(name = "gpu")
     public void setGpu(String gpu) {
         this.gpu = gpu;
     }
 
     @Column(name = "cpu_name")
-    public String getCpu() {
-        return cpu;
+    public String getCpu_name() {
+        return cpu_name;
     }
 
-    public void setCpu(String cpu) {
-        this.cpu = cpu;
+    public void setCpu_name(String cpu_name) {
+        this.cpu_name = cpu_name;
     }
 
     @Column(name = "os_version")
@@ -62,7 +61,7 @@ public class Comp {
     }
 
     @Column(name = "os")
-    public Os getOsType() {
+    public Os getOs() {
         return osType;
     }
 
@@ -71,11 +70,11 @@ public class Comp {
     }
 
     @Column(name = "mb")
-    public String getMotherboard() {
-        return motherboard;
+    public String getMb() {
+        return mb;
     }
 
-    public void setMotherboard(String motherboard) {
-        this.motherboard = motherboard;
+    public void setMb(String motherboard) {
+        this.mb = motherboard;
     }
 }

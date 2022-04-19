@@ -1,12 +1,8 @@
 package services;
 
 import entities.Comp;
+import jakarta.persistence.*;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CompServices {
@@ -17,8 +13,10 @@ public class CompServices {
     public Comp findById(Integer id){
         return entityManager.find(Comp.class, id);
     }
+
     public List<Comp> findAll(){
-        return entityManager.createQuery("SELECT * FROM comp_spec", Comp.class).getResultList();
+        Query query= entityManager.createQuery("SELECT a FROM Comp a", Comp.class);
+        return query.getResultList();
     }
 
     public void update(Comp comp){
