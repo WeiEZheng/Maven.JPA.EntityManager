@@ -13,16 +13,19 @@ public class Comp {
     @Enumerated(EnumType.STRING)
     private Os osType;
     private String mb;
+    @ManyToOne
+    String location;
 
     public Comp(){}
 
-    public Comp(Integer id, String gpu, String cpu_name, String osVersion, Os osType, String mb) {
+    public Comp(Integer id, String gpu, String cpu_name, String osVersion, Os osType, String mb, String location) {
         this.id = id;
         this.gpu = gpu;
         this.cpu_name = cpu_name;
         this.osVersion = osVersion;
         this.osType = osType;
         this.mb = mb;
+        this.location=location;
     }
 
     public Integer getId() {
@@ -37,7 +40,7 @@ public class Comp {
     public String getGpu() {
         return gpu;
     }
-    @Column(name = "gpu")
+
     public void setGpu(String gpu) {
         this.gpu = gpu;
     }
@@ -61,7 +64,7 @@ public class Comp {
     }
 
     @Column(name = "os")
-    public Os getOs() {
+    public Os getOsType() {
         return osType;
     }
 
@@ -76,5 +79,14 @@ public class Comp {
 
     public void setMb(String motherboard) {
         this.mb = motherboard;
+    }
+
+    @Column(name = "location")
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }

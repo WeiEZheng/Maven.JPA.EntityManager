@@ -14,7 +14,8 @@ class CompServicesTest {
         Comp newComp = new Comp(7, "AMD 5700XT",
                 "Ryzen 5 3600",
                 "11.2", Os.Linux,
-                "Gigabyte B450");
+                "Gigabyte B450",
+                "1");
         compServices.create(newComp);
         Assertions.assertTrue(compServices.findById(7).getCpu_name().equals("Ryzen 5 3600"));
         Assertions.assertTrue(compServices.findAll().size() == 7);
